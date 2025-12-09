@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shawarma Checklist & Recipe</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 18px;
+            background: #fafafa;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 14px;
+            font-size: 26px;
+        }
+
+        h2 {
+            margin-top: 26px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #ddd;
+            font-size: 20px;
+        }
+
+        .item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.4);
+            margin-right: 14px;
+        }
+
+        .btn-clear {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-clear:hover {
+            background: #e63e3e;
+        }
+
+        .recipe-box {
+            margin-top: 35px;
+            padding: 18px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .recipe-box h2 {
+            border-bottom: none;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .recipe-box p {
+            font-size: 15px;
+            margin: 10px 0;
+            line-height: 1.55;
+        }
+
+        /* Improve readability on small screens */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            input[type="checkbox"] {
+                transform: scale(1.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Shawarma Ingredients Checklist</h1>
+    <p style="text-align:center; font-size:14px; margin-top:-8px;">Your progress is saved automatically.</p>
+
+    <!-- CHECKLIST ITEMS -->
+
+    <h2>Pita Bread</h2>
+    <div class="item"><input type="checkbox" id="atta">Whole wheat flour – 1½ cups</div>
+    <div class="item"><input type="checkbox" id="maida">Maida – 1½ cups</div>
+    <div class="item"><input type="checkbox" id="curd">Curd – ½ cup</div>
+    <div class="item"><input type="checkbox" id="water">Warm water – ¾–1 cup</div>
+    <div class="item"><input type="checkbox" id="oil">Oil – 2 tbsp</div>
+    <div class="item"><input type="checkbox" id="bakingpowder">Baking powder – 1 tsp</div>
+    <div class="item"><input type="checkbox" id="sugar">Sugar – 1 tsp</div>
+    <div class="item"><input type="checkbox" id="salt-pita">Salt – 1 tsp</div>
+
+    <h2>Garlic Sauce</h2>
+    <div class="item"><input type="checkbox" id="mayo">Mayonnaise – ¾ cup</div>
+    <div class="item"><input type="checkbox" id="curd-garlic">Thick curd – ⅓ cup</div>
+    <div class="item"><input type="checkbox" id="garlic">Garlic – 6–7 cloves</div>
+    <div class="item"><input type="checkbox" id="lemon">Lemon juice – 1–2 tbsp</div>
+    <div class="item"><input type="checkbox" id="salt-garlic">Salt – ¼ tsp</div>
+    <div class="item"><input type="checkbox" id="pepper">Black pepper – pinch</div>
+
+    <h2>Red Sauce</h2>
+    <div class="item"><input type="checkbox" id="kashmiri">Kashmiri chilli powder – 2 tbsp</div>
+    <div class="item"><input type="checkbox" id="hot-chilli">Red chilli powder – ½ tsp</div>
+    <div class="item"><input type="checkbox" id="garlic-red">Garlic – 3–4 cloves</div>
+    <div class="item"><input type="checkbox" id="vinegar">Vinegar – 2 tbsp</div>
+    <div class="item"><input type="checkbox" id="ketchup">Tomato ketchup – 1 tbsp</div>
+    <div class="item"><input type="checkbox" id="sugar-red">Sugar – ½ tsp</div>
+    <div class="item"><input type="checkbox" id="salt-red">Salt – ¼ tsp</div>
+    <div class="item"><input type="checkbox" id="oil-red">Oil – 1 tbsp</div>
+
+    <h2>Hummus</h2>
+    <div class="item"><input type="checkbox" id="chickpeas">Boiled chickpeas – 1½ cups</div>
+    <div class="item"><input type="checkbox" id="tahini">Tahini – 3 tbsp</div>
+    <div class="item"><input type="checkbox" id="garlic-hummus">Garlic – 2–3 cloves</div>
+    <div class="item"><input type="checkbox" id="lemon-hummus">Lemon juice – 3 tbsp</div>
+    <div class="item"><input type="checkbox" id="oliveoil">Olive oil – 3 tbsp</div>
+    <div class="item"><input type="checkbox" id="water-hummus">Cold water – 3–4 tbsp</div>
+    <div class="item"><input type="checkbox" id="cumin">Cumin powder – ¼ tsp</div>
+    <div class="item"><input type="checkbox" id="salt-hummus">Salt – ½ tsp</div>
+
+    <h2>Pickle</h2>
+    <div class="item"><input type="checkbox" id="beet">Beetroot – 1 small</div>
+    <div class="item"><input type="checkbox" id="carrot">Carrot – 1 medium</div>
+    <div class="item"><input type="checkbox" id="vinegar-pickle">Vinegar – ½ cup</div>
+    <div class="item"><input type="checkbox" id="water-pickle">Water – ½ cup</div>
+    <div class="item"><input type="checkbox" id="sugar-pickle">Sugar – 1 tsp</div>
+    <div class="item"><input type="checkbox" id="salt-pickle">Salt – 1 tsp</div>
+
+    <h2>Chicken (4 wraps)</h2>
+    <div class="item"><input type="checkbox" id="chicken">Chicken – 500 g</div>
+    <div class="item"><input type="checkbox" id="curd-chicken">Curd – ½ cup</div>
+    <div class="item"><input type="checkbox" id="lemon-chicken">Lemon juice – 1½ tbsp</div>
+    <div class="item"><input type="checkbox" id="oil-chicken">Olive oil – 1½ tbsp</div>
+    <div class="item"><input type="checkbox" id="ggp">Ginger–garlic paste – 1 tbsp</div>
+    <div class="item"><input type="checkbox" id="spices-chicken">Chicken spices</div>
+
+    <h2>Paneer (3 wraps)</h2>
+    <div class="item"><input type="checkbox" id="paneer">Paneer – 350–400 g</div>
+    <div class="item"><input type="checkbox" id="curd-paneer">Curd – ⅓ cup</div>
+    <div class="item"><input type="checkbox" id="ggp-paneer">Ginger–garlic paste – 1 tsp</div>
+    <div class="item"><input type="checkbox" id="spices-paneer">Paneer spices</div>
+
+    <h2>Falafel</h2>
+    <div class="item"><input type="checkbox" id="dried-chickpeas">Dried chickpeas – 1 cup</div>
+    <div class="item"><input type="checkbox" id="onion">Onion – ½ small</div>
+    <div class="item"><input type="checkbox" id="garlic-falafel">Garlic – 4 cloves</div>
+    <div class="item"><input type="checkbox" id="greens">Coriander + parsley – 1 cup</div>
+    <div class="item"><input type="checkbox" id="green-chilli">Green chilli – 1</div>
+    <div class="item"><input type="checkbox" id="spices-falafel">Cumin + coriander powder</div>
+    <div class="item"><input type="checkbox" id="baking-soda">Baking soda – ½ tsp</div>
+    <div class="item"><input type="checkbox" id="besan">Gram flour – 1–2 tbsp</div>
+
+    <h2>Fresh Salad</h2>
+    <div class="item"><input type="checkbox" id="onion-salad">Onion – 1 large</div>
+    <div class="item"><input type="checkbox" id="tomato">Tomato – 1 large</div>
+    <div class="item"><input type="checkbox" id="cucumber-salad">Cucumber – 1 medium</div>
+    <div class="item"><input type="checkbox" id="cabbage">Cabbage/Lettuce – 1–1½ cups</div>
+
+    <!-- CLEAR ALL BUTTON -->
+    <button class="btn-clear" onclick="clearAll()">Clear All Ticks</button>
+
+    <!-- SIMPLE RECIPE SECTION -->
+    <div class="recipe-box">
+        <h2>Simple Recipe</h2>
+
+        <p><b>1. Pita:</b> Mix flours, curd, baking powder, sugar, salt, oil, and warm water.
+            Knead, rest 30–40 minutes. Roll and cook on a tawa until they puff.</p>
+
+        <p><b>2. Garlic sauce:</b> Mix mayo, curd, garlic, lemon, salt, pepper.</p>
+
+        <p><b>3. Red sauce:</b> Mix chilli powders, garlic, vinegar, ketchup, sugar, salt.
+            Cook briefly in oil until smooth.</p>
+
+        <p><b>4. Hummus:</b> Blend chickpeas, tahini, garlic, lemon, salt, olive oil, water.</p>
+
+        <p><b>5. Pickle:</b> Pour hot vinegar-water-salt-sugar mixture over beetroot & carrot.</p>
+
+        <p><b>6. Chicken:</b> Marinate with curd, lemon, oil, ginger-garlic paste, spices.
+            Cook until browned.</p>
+
+        <p><b>7. Paneer:</b> Marinate paneer with curd, spices, ginger-garlic paste.
+            Grill lightly.</p>
+
+        <p><b>8. Falafel:</b> Blend soaked chickpeas with onion, garlic, herbs, spices.
+            Add baking soda, shape, fry.</p>
+
+        <p><b>9. Assemble:</b> Spread hummus + garlic sauce on warm pita.
+            Add chicken or paneer + falafel, salad, pickle, red sauce. Roll and eat.</p>
+    </div>
+
+    <script>
+        // Save checkbox states
+        document.querySelectorAll("input[type='checkbox']").forEach(cb => {
+            const id = cb.id;
+            cb.checked = localStorage.getItem(id) === "true";
+            cb.addEventListener("change", () => {
+                localStorage.setItem(id, cb.checked);
+            });
+        });
+
+        // CLEAR ALL BUTTON
+        function clearAll() {
+            document.querySelectorAll("input[type='checkbox']").forEach(cb => {
+                cb.checked = false;
+                localStorage.setItem(cb.id, false);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
